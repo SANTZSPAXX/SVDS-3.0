@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #f3ff4f;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 100px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .login-btn {
+      padding: 10px 20px;
+      background-color: #00a650;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background-color: #009141;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="CSS/ICON.png" alt="Logotipo do Mercado Livre" class="logo">
+    <h2>SALVADOS</h2>
+    <form action="Salvados.html" method="get" onsubmit="return validateLogin()">
+      <input type="text" name="login" id="login" placeholder="login" required>
+      <br><br>
+      <input type="submit" value="Entrar" class="login-btn">
+    </form>
+  </div>
+
+  <script>
+    function validateLogin() {
+      var loginInput = document.getElementById("login").value;
+      if (loginInput === "SP02") {
+        return true; // Permite o envio do formulário
+      } else {
+        alert("Código de login inválido!");
+        return false; // Impede o envio do formulário
+      }
+    }
+  </script>
+</body>
+</html>
